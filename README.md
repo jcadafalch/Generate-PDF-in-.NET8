@@ -1,4 +1,4 @@
-# PoC-PDF-.NET7
+# Generate-PDF-in-.NET8
 <p>
     This project is a proof of concept of how to create PDFs in .NET using the <a href="https://www.questpdf.com/" target="_blank">QuestPDF</a> library.
 </p>
