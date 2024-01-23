@@ -20,10 +20,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+
 
     public IActionResult DownloadPDF()
     {
@@ -146,7 +143,7 @@ public class HomeController : Controller
 
                     col.Item().AlignRight().Text($"Total: {precioTotal} €").SemiBold().FontSize(12);
 
-                    col.Item().Background(Colors.Grey.Medium).Padding(10).Column(column =>
+                    col.Item().Background(Colors.Grey.Lighten3).Padding(10).Column(column =>
                     {
                         column.Item().Text("Comentarios").FontSize(14);
                         column.Item().Text(Placeholders.LoremIpsum());
@@ -165,9 +162,9 @@ public class HomeController : Controller
                 });
 
             });
-        }).GeneratePdf();
+        });
 
-        Stream stream = new MemoryStream(data);
+        Stream stream = new MemoryStream(data.GeneratePdf());
 
         return File(stream, "application/pdf", "detalleVenta.pdf");
 

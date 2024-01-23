@@ -122,7 +122,7 @@ Document.Create(document =>
 
             col.Item().AlignRight().Text($"Total: {precioTotal} €").SemiBold().FontSize(12);
 
-            col.Item().Background(Colors.Grey.Medium).Padding(10).Column(column =>
+            col.Item().Background(Colors.Grey.Lighten3).Padding(10).Column(column =>
             {
                 column.Item().Text("Comentarios").FontSize(14);
                 column.Item().Text(Placeholders.LoremIpsum());
